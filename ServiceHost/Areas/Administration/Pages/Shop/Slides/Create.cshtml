@@ -1,0 +1,76 @@
+﻿@page
+@*@model ShopManagement.application.Contracts.ProductCategory.CreateProductCategory*@
+@model ServiceHost.Areas.Administration.Pages.Shop.Slides.CreateModel
+@{
+
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ایجاد گروه محصول جدید</h4>
+    </div>*@
+
+<form method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+       
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="Picture" class="control-label">عکس</label>
+                    <input type="text" class="form-control" name="Picture" asp-for="createSlide.Picture" accept="image/*">
+                    <span asp-validation-for="createSlide.Picture" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureAlt" class="control-label">Alt</label>
+                    <input type="text" class="form-control" name="PictureAlt" asp-for="createSlide.PictureAlt">
+                    <span asp-validation-for="createSlide.PictureAlt" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureTitle" class="control-label">عنوان</label>
+                    <input type="text" class="form-control" name="PictureTitle" asp-for="createSlide.PictureTitle">
+                    <span asp-validation-for="createSlide.PictureTitle" class="error"></span>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Heading" class="control-label">تیتر</label>
+                    <input type="text" class="form-control" name="Heading" asp-for="createSlide.Heading">
+                    <span asp-validation-for="createSlide.Heading" class="error"></span>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Title" class="control-label">عنوان</label>
+                    <input type="text" class="form-control" name="Title" asp-for="createSlide.Title">
+                    <span asp-validation-for="createSlide.Title" class="error"></span>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Text" class="control-label">متن</label>
+                    <input type="text" class="form-control" name="Text" asp-for="createSlide.Text">
+                    <span asp-validation-for="createSlide.Text" class="error"></span>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Btntext" class="control-label">متن دکمه</label>
+                    <input type="text" class="form-control" name="Btntext" asp-for="createSlide.BtnText">
+                    <span asp-validation-for="createSlide.BtnText" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

@@ -1,0 +1,59 @@
+﻿@page
+@*@model ShopManagement.application.Contracts.ProductCategory.CreateProductCategory*@
+@model ServiceHost.Areas.Administration.Pages.Shop.ProductPictures.CreateModel
+@{
+
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ایجاد گروه محصول جدید</h4>
+    </div>*@
+
+<form method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="form-group">
+                    <label class="sr-only" for="ProductId" asp-for="CreateProductPicture.ProductId"></label>
+                    <select class="form-control" name="ProductId" asp-for="CreateProductPicture.ProductId" asp-items="Model.products">
+                        <option value="0"> محصول </option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="Picture" class="control-label">عکس</label>
+                    <input type="text" class="form-control" name="Picture" asp-for="CreateProductPicture.Picture" accept="image/*">
+                    <span asp-validation-for="CreateProductPicture.Picture" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureAlt" class="control-label">Alt</label>
+                    <input type="text" class="form-control" name="PictureAlt" asp-for="CreateProductPicture.PictureAlt">
+                    <span asp-validation-for="CreateProductPicture.PictureAlt" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureTitle" class="control-label">عنوان</label>
+                    <input type="text" class="form-control" name="PictureTitle" asp-for="CreateProductPicture.PictureTitle">
+                    <span asp-validation-for="CreateProductPicture.PictureTitle" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

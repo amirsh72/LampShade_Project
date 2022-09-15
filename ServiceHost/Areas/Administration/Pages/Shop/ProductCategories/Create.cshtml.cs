@@ -16,7 +16,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
 
         public void OnGet()
         {
-          
+            
         }
         public JsonResult OnPost(CreateProductCategory command)
         {
