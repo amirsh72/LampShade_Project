@@ -21,3 +21,5 @@ D:\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.C
 D:\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.dll
 D:\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
 D:\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampShadeQuery.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampShadeQuery.pdb

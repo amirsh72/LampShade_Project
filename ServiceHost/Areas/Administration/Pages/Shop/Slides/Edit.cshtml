@@ -58,6 +58,13 @@
             </div>
              <div class="col-md-6">
                 <div class="form-group">
+                    <label for="link" class="control-label">لینک</label>
+                    <input type="text" class="form-control" name="Btntext" asp-for="editSlide.Link">
+                    <span asp-validation-for="editSlide.Link" class="error"></span>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="form-group">
                     <label for="Btntext" class="control-label">متن دکمه</label>
                     <input type="text" class="form-control" name="Btntext" asp-for="editSlide.BtnText">
                     <span asp-validation-for="editSlide.BtnText" class="error"></span>
