@@ -1,0 +1,56 @@
+﻿@page "{id:long}"
+@model ServiceHost.Areas.Administration.Pages.Discounts.CustomerDiscounts.EditModel
+@{
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ویرایش گروه محصول</h4>
+    </div>*@
+<form method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+          <div class="form-group">
+                    <label for="DiscountRate" class="control-label">درصد تخفیف</label>
+                    <input type="text" class="form-control" name="DiscountRate" asp-for="editCustomerDiscount.DiscountRate" onchange="makeSlug('Name', 'Slug')">
+                    <span asp-validation-for="editCustomerDiscount.DiscountRate" class="error"></span>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="StartDate" class="control-label">تاریخ شروع</label>
+                    <input type="text" class="form-control" name="StartDate" asp-for="editCustomerDiscount.StartDate">
+                    <span asp-validation-for="editCustomerDiscount.EndDate" class="error"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="EndDate" class="control-label">تاریخ پایان</label>
+                    <input type="text" class="form-control" name="EndDate" asp-for="editCustomerDiscount.EndDate">
+                    <span asp-validation-for="editCustomerDiscount.EndDate" class="error"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="sr-only" for="ProductId" asp-for="editCustomerDiscount.ProductId"></label>
+                    <select class="form-control" name="ProductId" asp-for="editCustomerDiscount.ProductId" asp-items="Model.products">
+                        <option value="0">گروه محصول </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Slug" class="control-label">علت تخفیف</label>
+                    <input type="text" class="form-control" name="Reason" asp-for="editCustomerDiscount.Reason" id="Slug">
+                    <span asp-validation-for="editCustomerDiscount.Reason" class="error"></span>
+                </div>
+            </div>
+        </div>
+    <input type="hidden" class="form-control" name="Id" asp-for="editCustomerDiscount.Id" value="@Model.editCustomerDiscount.Id">
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

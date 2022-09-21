@@ -173,3 +173,17 @@ D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\01_LampShadeQuery.dll
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\01_LampShadeQuery.pdb
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Slide\Default.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategory\Default.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Configuretion.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Configuretion.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\CustomerDiscounts\Create.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\CustomerDiscounts\Edit.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\CustomerDiscounts\Index.cshtml.g.cs

@@ -40,7 +40,7 @@
                 <div class="form-group">
                     <label for="PictureTitle" class="control-label">عنوان</label>
                     <input type="text" class="form-control" name="PictureTitle" asp-for="editProductPicture.PictureTitle">
-                    <input type="hidden"  name="Id" asp-for="editProductPicture.Id">
+                    
                     <span asp-validation-for="editProductPicture.PictureTitle" class="error"></span>
                 </div>
             </div>
@@ -55,6 +55,7 @@
             
         </div>
     </div>
+     <input type="hidden" class="form-control" name="Id" asp-for="editProductPicture.Id" value="@Model.editProductPicture.Id">
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
         <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>

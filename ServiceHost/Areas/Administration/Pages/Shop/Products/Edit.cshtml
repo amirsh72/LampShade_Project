@@ -13,7 +13,7 @@
                 <div class="form-group">
                     <label for="Name" class="control-label">نام</label>
                     <input type="text" class="form-control" name="Name" asp-for="editProduct.Name" onchange="makeSlug('Name', 'Slug')">
-                    <input type="hidden" class="form-control" asp-for="editProduct.Id" id="Slug" value="editProduct.Id">
+                    
                     <span asp-validation-for="editProduct.Name" class="error"></span>
                 </div>
                 <div class="form-group">
@@ -100,6 +100,7 @@
             </div>
         </div>
     </div>
+    <input type="hidden" class="form-control" name="Id" asp-for="editProduct.Id" value="@Model.editProduct.Id">
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
         <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
