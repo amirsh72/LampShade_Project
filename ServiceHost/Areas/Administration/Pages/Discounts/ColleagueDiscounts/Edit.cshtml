@@ -1,0 +1,41 @@
+﻿@page "{id:long}"
+@model ServiceHost.Areas.Administration.Pages.Discounts.ColleagueDiscounts.EditModel
+@{
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ویرایش گروه محصول</h4>
+    </div>*@
+<form method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="DiscountRate" class="control-label">درصد تخفیف</label>
+                    <input type="text" class="form-control" name="DiscountRate" asp-for="editColleagueDiscount.DiscountRate" onchange="makeSlug('Name', 'Slug')">
+                    <span asp-validation-for="editColleagueDiscount.DiscountRate" class="error"></span>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="form-group">
+                    <label class="sr-only" for="ProductId" asp-for="editColleagueDiscount.ProductId"></label>
+                    <select class="form-control" name="ProductId" asp-for="editColleagueDiscount.ProductId" asp-items="Model.products">
+                        <option value="0">گروه محصول </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" class="form-control" name="Id" asp-for="editColleagueDiscount.Id" value="@Model.editColleagueDiscount.Id">
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

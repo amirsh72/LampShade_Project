@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DiscountManagement.Application
 {
-    public class ColleagueDiscountApplication : IColleageDiscountApplication
+    public class ColleagueDiscountApplication : IColleagueDiscountApplication
     {
         private readonly IColleagueDiscountRepository _colleagueDiscountRepository;
 

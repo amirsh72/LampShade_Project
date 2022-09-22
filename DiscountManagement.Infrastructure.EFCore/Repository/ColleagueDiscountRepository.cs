@@ -24,12 +24,12 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
 
         public EditColleagueDiscount GetDetails(long id)
         {
-            return _context.colleagueDiscounts.Select(c => new EditColleagueDiscount 
-            { 
-                DiscountRate=c.DiscountRate,
-                Id=c.Id,
-                ProductId=c.PriductId,
-            }).FirstOrDefault(x=>x.Id==id);
+            return _context.colleagueDiscounts.Select(c => new EditColleagueDiscount
+            {
+                DiscountRate = c.DiscountRate,
+                Id = c.Id,
+                ProductId = c.ProductId,
+            }).FirstOrDefault(x => x.Id == id);
         }
 
         public List<ColleagueDiscountViewModel> Search(ColleagueDiscountSearchModel searchmodel)
@@ -41,30 +41,16 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
                     Id = x.Id,
                     CreationDate = x.CreationDate.ToFarsi(),
                     DiscountRate = x.DiscountRate,
-            
+                    IsRemoved = x.IsRemoved,
                     ProductId = x.ProductId,
-               
-                   
+
+
 
                 }).ToList();
             if (searchmodel.ProductId > 0)
                 query.Where(x => x.ProductId == searchmodel.ProductId).ToList();
-            if (!string.IsNullOrWhiteSpace(searchmodel.StartDate))
-            {
 
 
-
-                query = query.Where(x => x.StartDateGr > searchmodel.StartDate.ToGeorgianDateTime()).ToList();
-
-            }
-            if (!string.IsNullOrWhiteSpace(searchmodel.EndDate))
-            {
-
-
-
-                query = query.Where(x => x.EndDateGr < searchmodel.EndDate.ToGeorgianDateTime()).ToList();
-
-            }
             var discount = query.OrderByDescending(x => x.Id).ToList();
             discount.ForEach(discount =>
             discount.Product = products.FirstOrDefault(x => x.Id == discount.ProductId)?.Name);
