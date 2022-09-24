@@ -70,7 +70,17 @@
       "ProjectGuid": "0cf6f998-144b-4837-9388-f08528c7972e",
       "DisplayName": "DiscountManagement.Configuretion",
       "ColorIndex": 12
+    },
+    "3b2608ab-c801-459d-b7dc-8b2ab04c1be7": {
+      "ProjectGuid": "3b2608ab-c801-459d-b7dc-8b2ab04c1be7",
+      "DisplayName": "InventoryManagement.Domain",
+      "ColorIndex": 13
+    },
+    "b4859c92-d970-40f5-b548-05375160f833": {
+      "ProjectGuid": "b4859c92-d970-40f5-b548-05375160f833",
+      "DisplayName": "InventoryManagement.Application.Contracts",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 13
+  "NextColorIndex": 15
 }
