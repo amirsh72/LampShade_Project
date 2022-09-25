@@ -49,11 +49,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InventoryManagement", "Inve
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IM.Domain", "IM.Domain", "{9F6BEB5C-D196-42E8-9699-9AF85998A50D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Domain", "InventoryManagement.Domain\InventoryManagement.Domain.csproj", "{3B2608AB-C801-459D-B7DC-8B2AB04C1BE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Domain", "InventoryManagement.Domain\InventoryManagement.Domain.csproj", "{3B2608AB-C801-459D-B7DC-8B2AB04C1BE7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IM.Application", "IM.Application", "{AA6D4AE1-A1C7-4E5D-A16E-8074C1E6D3DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Application.Contracts", "InventoryManagement.Application.Contracts\InventoryManagement.Application.Contracts.csproj", "{B4859C92-D970-40F5-B548-05375160F833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Application.Contracts", "InventoryManagement.Application.Contracts\InventoryManagement.Application.Contracts.csproj", "{B4859C92-D970-40F5-B548-05375160F833}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IM.Infrastructure", "IM.Infrastructure", "{4FC70DC8-DC0C-4EF2-923D-9EE07B0DF290}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Infrastructure.EFCore", "InventoryManagement.Infrastructure.EFCore\InventoryManagement.Infrastructure.EFCore.csproj", "{52EA12F6-CB08-4B86-8367-C01DBCC3379E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Infrastructure.Configuration", "InventoryManagement.Infrastructure.Configuration\InventoryManagement.Infrastructure.Configuration.csproj", "{AD1B0622-72BF-48B1-BEC5-A968D47852CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Application", "InventoryManagement.Application\InventoryManagement.Application.csproj", "{8A1F299C-6D14-4A19-94CC-84A5781DE16E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +129,18 @@ Global
 		{B4859C92-D970-40F5-B548-05375160F833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4859C92-D970-40F5-B548-05375160F833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4859C92-D970-40F5-B548-05375160F833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EA12F6-CB08-4B86-8367-C01DBCC3379E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EA12F6-CB08-4B86-8367-C01DBCC3379E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EA12F6-CB08-4B86-8367-C01DBCC3379E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EA12F6-CB08-4B86-8367-C01DBCC3379E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1B0622-72BF-48B1-BEC5-A968D47852CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1B0622-72BF-48B1-BEC5-A968D47852CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1B0622-72BF-48B1-BEC5-A968D47852CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1B0622-72BF-48B1-BEC5-A968D47852CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A1F299C-6D14-4A19-94CC-84A5781DE16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1F299C-6D14-4A19-94CC-84A5781DE16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1F299C-6D14-4A19-94CC-84A5781DE16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1F299C-6D14-4A19-94CC-84A5781DE16E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +166,10 @@ Global
 		{3B2608AB-C801-459D-B7DC-8B2AB04C1BE7} = {9F6BEB5C-D196-42E8-9699-9AF85998A50D}
 		{AA6D4AE1-A1C7-4E5D-A16E-8074C1E6D3DB} = {72FE5467-C3B1-49D7-BFFA-F95CED4122D4}
 		{B4859C92-D970-40F5-B548-05375160F833} = {AA6D4AE1-A1C7-4E5D-A16E-8074C1E6D3DB}
+		{4FC70DC8-DC0C-4EF2-923D-9EE07B0DF290} = {72FE5467-C3B1-49D7-BFFA-F95CED4122D4}
+		{52EA12F6-CB08-4B86-8367-C01DBCC3379E} = {4FC70DC8-DC0C-4EF2-923D-9EE07B0DF290}
+		{AD1B0622-72BF-48B1-BEC5-A968D47852CD} = {4FC70DC8-DC0C-4EF2-923D-9EE07B0DF290}
+		{8A1F299C-6D14-4A19-94CC-84A5781DE16E} = {AA6D4AE1-A1C7-4E5D-A16E-8074C1E6D3DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF78D1B5-11E4-472E-A1F9-513837B3C361}

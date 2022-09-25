@@ -80,7 +80,17 @@
       "ProjectGuid": "b4859c92-d970-40f5-b548-05375160f833",
       "DisplayName": "InventoryManagement.Application.Contracts",
       "ColorIndex": 14
+    },
+    "52ea12f6-cb08-4b86-8367-c01dbcc3379e": {
+      "ProjectGuid": "52ea12f6-cb08-4b86-8367-c01dbcc3379e",
+      "DisplayName": "InventoryManagement.Infrastructure.EFCore",
+      "ColorIndex": 15
+    },
+    "ad1b0622-72bf-48b1-bec5-a968d47852cd": {
+      "ProjectGuid": "ad1b0622-72bf-48b1-bec5-a968d47852cd",
+      "DisplayName": "InventoryManagement.Infrastructure.Configuration",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 1
 }
