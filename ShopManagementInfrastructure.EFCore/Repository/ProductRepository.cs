@@ -2,6 +2,7 @@
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.application.Contracts.Product;
+
 using ShopManagement.Domain.ProductAgg;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace ShopManagementInfrastructure.EFCore.Repository
     public class ProductRepository : RepositoryBase<long, Product>, IProductRepository
     {
         private readonly ShopContext _context;
+        
+
 
         public ProductRepository(ShopContext context) : base(context)
         {
@@ -36,7 +39,6 @@ namespace ShopManagementInfrastructure.EFCore.Repository
                 PictureAlt=x.PictureAlt,
                 PictureTitle=x.PictureTitle,
                 ShortDescription=x.ShortDescription,
-                UnitPrice=x.UnitPrice,
             }).FirstOrDefault(x=>x.Id == id);
         }
 
@@ -61,8 +63,6 @@ namespace ShopManagementInfrastructure.EFCore.Repository
                     CategoryId = x.CategoryId,
                     Code = x.Code,
                     Picture = x.Picture,
-                    UnitPrice = x.UnitPrice,
-                    IsInStock=x.IsInStock,
                     CreationDate=x.CreationDate.ToFarsi()
                 });
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

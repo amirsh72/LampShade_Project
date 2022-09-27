@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DiscountManagement.Application.Contract.ColleagueDiscount
 {
-    public interface IColleagueDiscountApplication
+    public interface IInventoryApplication
     {
         OperationResult Define(DefineColleagueDiscount command);
         OperationResult Edit(EditColleagueDiscount command);

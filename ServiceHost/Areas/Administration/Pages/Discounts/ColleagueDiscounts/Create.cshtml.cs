@@ -13,10 +13,10 @@ namespace ServiceHost.Areas.Administration.Pages.Discounts.ColleagueDiscounts
         public SelectList products;
         public DefineColleagueDiscount defineColleagueDiscount { get; set; }
         private readonly IProductApplication _productApplication;
-        private readonly IColleagueDiscountApplication _colleagueDiscount;
+        private readonly IInventoryApplication _colleagueDiscount;
 
         public CreateModel(IProductApplication productApplication, 
-            IColleagueDiscountApplication colleagueDiscount)
+            IInventoryApplication colleagueDiscount)
         {
             _productApplication = productApplication;
             _colleagueDiscount = colleagueDiscount;

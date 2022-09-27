@@ -15,10 +15,10 @@ namespace ServiceHost.Areas.Administration.Pages.Discounts.ColleagueDiscounts
         public SelectList products;
         
         private readonly IProductApplication _productApplication;
-        private readonly IColleagueDiscountApplication _colleagueDiscountApplication;
+        private readonly IInventoryApplication _colleagueDiscountApplication;
 
         public EditModel(IProductApplication productApplication, 
-            IColleagueDiscountApplication colleagueDiscountApplication)
+            IInventoryApplication colleagueDiscountApplication)
         {
             _productApplication = productApplication;
             _colleagueDiscountApplication = colleagueDiscountApplication;

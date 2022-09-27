@@ -90,7 +90,12 @@
       "ProjectGuid": "ad1b0622-72bf-48b1-bec5-a968d47852cd",
       "DisplayName": "InventoryManagement.Infrastructure.Configuration",
       "ColorIndex": 0
+    },
+    "8a1f299c-6d14-4a19-94cc-84a5781de16e": {
+      "ProjectGuid": "8a1f299c-6d14-4a19-94cc-84a5781de16e",
+      "DisplayName": "InventoryManagement.Application",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

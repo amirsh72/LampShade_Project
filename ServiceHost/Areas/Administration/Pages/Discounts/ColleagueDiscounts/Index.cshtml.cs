@@ -17,10 +17,10 @@ namespace ServiceHost.Areas.Administration.Pages.Discounts.ColleagueDiscounts
         public SelectList products;
 
         private readonly IProductApplication _productApplication;
-        private readonly IColleagueDiscountApplication _ColleagueDiscountApplication;
+        private readonly IInventoryApplication _ColleagueDiscountApplication;
 
         public IndexModel(IProductApplication productApplication,
-            IColleagueDiscountApplication customerDiscountApplication)
+            IInventoryApplication customerDiscountApplication)
         {
             _productApplication = productApplication;
             _ColleagueDiscountApplication = customerDiscountApplication;
