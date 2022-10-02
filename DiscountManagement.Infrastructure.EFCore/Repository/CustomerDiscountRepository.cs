@@ -29,8 +29,8 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
                     Id = x.Id,
                     ProductId = x.ProductId,
                     DiscountRate = x.DiscountRate,
-                    StartDate = x.StartDate.ToString(),
-                    EndDate = x.EndDate.ToString(),
+                    StartDate = x.StartDate.ToFarsi(),
+                    EndDate = x.EndDate.ToFarsi(),
                     Reason = x.Reason,
                     
 

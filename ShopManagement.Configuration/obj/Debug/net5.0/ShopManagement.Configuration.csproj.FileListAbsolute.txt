@@ -23,3 +23,15 @@ D:\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManageme
 D:\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampShadeQuery.dll
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampShadeQuery.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb

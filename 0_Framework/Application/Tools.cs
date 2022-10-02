@@ -33,6 +33,7 @@ namespace _0_Framework.Application
             return $"{pc.GetYear(date)}/{pc.GetMonth(date):00}/{pc.GetDayOfMonth(date):00}";
         }
         
+
         public static string ToDiscountFormat(this DateTime date)
         {
             if (date == new DateTime()) return "";
@@ -43,6 +44,7 @@ namespace _0_Framework.Application
         {
             return $"_{date.Hour:00}_{date.Minute:00}_{date.Second:00}";
         }
+        
 
         public static string ToFarsiFull(this DateTime date)
         {
