@@ -5,10 +5,12 @@ using _01_LampShadeQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Aplication;
+using ShopManagement.application.Contracts.Comment;
 using ShopManagement.application.Contracts.Product;
 using ShopManagement.application.Contracts.ProductCategory;
 using ShopManagement.application.Contracts.ProductPicture;
 using ShopManagement.application.Contracts.Slide;
+using ShopManagement.Domain.CommentAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
@@ -34,6 +36,9 @@ namespace ShopManagement.Configuration
 
             services.AddTransient<ISlideApplication,SlideApplication>();
             services.AddTransient<ISlideRepository, SlideRepository>();
+
+            services.AddTransient<ICommentApplication, CommentApplication>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
 
             services.AddTransient<ISlideQuery, SlideQuery>();
             services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
