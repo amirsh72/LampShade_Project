@@ -219,7 +219,7 @@
                                                    data-toggle="tab" href="#product-description" role="tab"
                                                    aria-selected="true">توضیحات</a>
                                                <a class="nav-item nav-link" id="review-tab" data-toggle="tab"
-                                                   href="#review" role="tab" aria-selected="false">نظرات (@Model.Product.Comments.Count)</a>
+                                                   href="#review" role="tab" aria-selected="false">نظرات (@Model.Product.comments.Count)</a>
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
@@ -229,10 +229,10 @@
                                                     @Model.Product.Description
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="review" role="tabpanel"
+                                           @* <div class="tab-pane fade" id="review" role="tabpanel"
                                                  aria-labelledby="review-tab">
                                                 <div class="product-rating-wrap">
-                                                    @*<div class="rating-list">
+                                                    <div class="rating-list">
                                                             <div class="sin-list float-right">
                                                                 <i class="fa fa-star"></i>
                                                                 <i class="fa fa-star"></i>
@@ -274,7 +274,8 @@
                                                                 <span>(0)</span>
                                                             </div>
                                                         </div>*@
-                                                   @foreach (var comment in Model.Product.Comments)
+                                                        <div>
+                                                   @foreach (var comment in Model.Product.comments)
                                                     {
                                                         <div class="ratings-wrapper">
                                                             <div class="sin-ratings">
@@ -294,7 +295,7 @@
                                                         </div>
                                                     }
 
-                                                    <div class="rating-form-wrapper fix">
+                                                   </div>
                                                         <h3>نظر خود را به ما بگویید</h3>
                                                         <form method="post">
                                                             <div class="rating-form row">
@@ -310,7 +311,7 @@
                                                                     <label for="your-review">نظر شما:</label>
                                                                     <textarea name="message" id="message" placeholder="نظر خود را بنویسید ..."></textarea>
                                                                 </div>
-                                                                <input type="hidden" name="ownerRecordId" value="@Model.Product.Id" />
+                                                                <input type="hidden" name="ProductId" value="@Model.Product.Id" />
                                                                 @*<input type="hidden" name="type" value="@CommnetManagement.Infrastructure.EFCore.CommentType.Product" />*@
                                                                 <input type="hidden" name="productSlug" value="@Model.Product.Slug" />
                                                                 <div class="col-12">
@@ -318,7 +319,7 @@
                                                                 </div>
                                                             </div>
                                                         </form>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -330,5 +331,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    
+

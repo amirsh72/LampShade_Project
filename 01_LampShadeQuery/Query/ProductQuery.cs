@@ -199,7 +199,7 @@ namespace _01_LampShadeQuery.Query
         {
             return comments
                 .Where(x => !x.IsCanceled)
-                .Where(x => !x.IsConfirmed)
+                .Where(x => x.IsConfirmed)
                 .Select(x => new CommentQueryModel
                 {
                     Id = x.Id,

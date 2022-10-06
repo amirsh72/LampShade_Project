@@ -33,12 +33,13 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Comments
         public IActionResult OnGetConfirm(long id)
         {
             _commentApplication.Confirm(id);
-            return Partial("./index", new CreateProduct());
+            return RedirectToPage("index");
         }
         public IActionResult OnGetCancel(long id)
         {
             _commentApplication.Cancel(id);
-            return Partial("./index", new CreateProduct());
+            return RedirectToPage("index");
+
         }
     }
 }
