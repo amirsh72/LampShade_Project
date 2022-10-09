@@ -20,6 +20,10 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
         }
         public JsonResult OnPost()
         {
+            if (ModelState.IsValid)
+            {
+
+            }
           var result=_productCategoryApplication.Edit(editProductCategory);
             
             RedirectToPage("./Index");

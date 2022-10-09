@@ -29,7 +29,7 @@ namespace ShopManagementInfrastructure.EFCore.Repository
                 Name =x.Name,
                 KeyWords = x.KeyWords,
                 MetaDescription = x.MetaDescription,
-                Picture=x.Picture,
+               // Picture=x.Picture,
                 PictureAlt=x.PictureAlt,
                 PictureTitle=x.PictureTitle,
                 Slug=x.Slug,
@@ -46,6 +46,11 @@ namespace ShopManagementInfrastructure.EFCore.Repository
 
 
             }).ToList();
+        }
+
+        public string GetSlugBy(long id)
+        {
+            return _Context.productCategories.Select(x => new { x.Id, x.Slug }).FirstOrDefault(x=>x.Id==id).Slug;
         }
 
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)

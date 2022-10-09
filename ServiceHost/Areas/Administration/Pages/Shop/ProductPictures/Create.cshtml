@@ -27,7 +27,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="Picture" class="control-label">عکس</label>
-                    <input type="text" class="form-control" name="Picture" asp-for="CreateProductPicture.Picture" accept="image/*">
+                    <input type="file" class="form-control" name="Picture" asp-for="CreateProductPicture.Picture" accept="image/*">
                     <span asp-validation-for="CreateProductPicture.Picture" class="error"></span>
                 </div>
             </div>
