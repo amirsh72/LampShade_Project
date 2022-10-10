@@ -817,8 +817,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "ShopManagement.Domain >= 1.0.0",
-      "ShopManagement.application.Contracts >= 1.0.0"
+      "ShopManagement.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -848,9 +847,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Code\\LampShade\\ShopManagement.application.Contracts\\ShopManagement.application.Contracts.csproj": {
-              "projectPath": "D:\\Code\\LampShade\\ShopManagement.application.Contracts\\ShopManagement.application.Contracts.csproj"
-            },
             "D:\\Code\\LampShade\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {
               "projectPath": "D:\\Code\\LampShade\\ShopManagement.Domain\\ShopManagement.Domain.csproj"
             }

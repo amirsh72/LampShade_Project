@@ -1996,8 +1996,7 @@
       },
       "ShopManagement.Aplication/1.0.0": {
         "dependencies": {
-          "ShopManagement.Domain": "1.0.0",
-          "ShopManagement.application.Contracts": "1.0.0"
+          "ShopManagement.Domain": "1.0.0"
         },
         "runtime": {
           "ShopManagement.Aplication.dll": {}

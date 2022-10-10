@@ -25,10 +25,18 @@ namespace ShopManagementInfrastructure.EFCore.Repository
                 {
                     Id = p.Id,
                     ProductId = p.ProductId,
-                    Picture = p.Picture,
+                    //Picture = p.Picture,
                     PictureAlt = p.PictureAlt,
                     PictureTitle = p.PictureTitle,
                 }).FirstOrDefault(x=>x.Id==id);
+        }
+
+        public ProductPicture GetProductAndCategory(long id)
+        {
+            return _Context.productPictures
+                .Include(x => x.product)
+                .ThenInclude(x => x.Category)
+                .FirstOrDefault(x => x.Id == id);
         }
 
         public List<ProductPictureViewModel> Search(ProductPictureSearchModel searchmodel)

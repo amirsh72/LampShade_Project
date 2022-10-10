@@ -91,7 +91,7 @@
                                                         }
 
                                                         <a href="single-product.html">
-                                                            <img src="@product.Picture" class="img-fluid"
+                                                            <img src="~/ProductPictures/@product.Picture" class="img-fluid"
                                                              alt="@product.PictureAlt" title="@product.PictureTitle">
 
                                                         </a>
@@ -137,6 +137,7 @@
                                                                 <span class="main-price">@product.Price تومان</span>
                                                             }
                                                         </p>
+
                                                         if(@product.HasDiscount)
                                                         {
                                                         <div class="product-countdown" data-countdown="@product.DiscountExpireDate"></div>

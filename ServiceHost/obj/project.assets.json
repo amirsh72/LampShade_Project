@@ -2266,8 +2266,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "ShopManagement.Domain": "1.0.0",
-          "ShopManagement.application.Contracts": "1.0.0"
+          "ShopManagement.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ShopManagement.Aplication.dll": {}

@@ -27,8 +27,8 @@ namespace ShopManagement.Aplication
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
             var slug = command.Slug.Slugify1();
             var picturePath = $"{command.Slug}";
-            var filaName = _fileUploader.Upload(command.Picture,picturePath);
-            var productCategory=new ProductCategory(command.Name,command.Description,filaName
+            var pictureName=_fileUploader.Upload(command.Picture,picturePath);
+            var productCategory=new ProductCategory(command.Name,command.Description,picturePath
                 ,command.PictureAlt,command.PictureTitle,command.KeyWords,
                 command.MetaDescription,slug);
             _productCategoryRepository.Create(productCategory);
