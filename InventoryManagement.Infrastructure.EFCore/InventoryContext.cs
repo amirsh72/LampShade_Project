@@ -9,7 +9,7 @@ namespace InventoryManagement.Infrastructure.EFCore
     {
         public DbSet<Inventory> Inventory { get; set; }
         public DbSet<InventoryOperation> operations { get; set; }
-        public InventoryContext(DbContextOptions options) : base(options)
+        public InventoryContext(DbContextOptions<InventoryContext> options) : base(options)
         {
 
         }

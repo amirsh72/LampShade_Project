@@ -1,0 +1,97 @@
+﻿@page
+@*@model ShopManagement.application.Contracts.ProductCategory.CreateProductCategory*@
+@model ServiceHost.Areas.Administration.Pages.Blog.ArticleCategories.CreateModel
+@{
+    
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ایجاد گروه محصول جدید</h4>
+</div>*@
+
+<form  method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Name" class="control-label">نام</label>
+                    <input type="text" class="form-control" name="Name" asp-for="createArticleCategory.Name" onchange="makeSlug('Name', 'Slug')">
+                    <span asp-validation-for="createArticleCategory.Name" class="error"></span>
+                </div>
+            </div><div class="col-md-6">
+                <div class="form-group">
+                    <label for="Slug" class="control-label">اسلاگ</label>
+                    <input type="text" class="form-control" name="Slug" asp-for="createArticleCategory.Slug" id="Slug">
+                    <span asp-validation-for="createArticleCategory.Slug" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="Picture" class="control-label">عکس</label>
+                    <input type="file" class="form-control" name="Picture" asp-for="createArticleCategory.Picture" accept="image/*">
+                    <span asp-validation-for="createArticleCategory.Picture" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureAlt" class="control-label">Alt</label>
+                    <input type="text" class="form-control" name="PictureAlt" asp-for="createArticleCategory.PictureAlt">
+                    <span asp-validation-for="createArticleCategory.PictureAlt" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureTitle" class="control-label">عنوان</label>
+                    <input type="text" class="form-control" name="PictureTitle" asp-for="createArticleCategory.PictureTitle">
+                    <span asp-validation-for="createArticleCategory.PictureTitle" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="Description" class="control-label">توضیحات</label>
+                    <textarea class="form-control autogrow" name="Description" asp-for="createArticleCategory.Description" onchange="fillField('Description', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="createArticleCategory.Description" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="KeyWords" class="control-label">کلمات کلیدی</label>
+                    <input type="text" class="form-control" name="KeyWords" asp-for="createArticleCategory.Keywords">
+                    <span asp-validation-for="createArticleCategory.Keywords" class="error"></span>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="KeyWords" class="control-label">ترتیب نمایش</label>
+                    <input  class="form-control" name="ShowOrder" asp-for="createArticleCategory.ShowOrder">
+                    <span asp-validation-for="createArticleCategory.Keywords" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="MetaDescription" class="control-label">توضیحات متا</label>
+                    <textarea class="form-control autogrow" name="MetaDescription" asp-for="createArticleCategory.MetaDescription"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="createArticleCategory.MetaDescription" class="error"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

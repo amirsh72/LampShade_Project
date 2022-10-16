@@ -218,3 +218,16 @@ D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Feature
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\System.IO.Pipelines.dll
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contracts.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastrcture.EFCore.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastructure.Configuration.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagment.Application.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastructure.Configuration.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contracts.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastrcture.EFCore.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\BlogManagment.Application.pdb
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Create.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Edit.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Index.cshtml.g.cs
