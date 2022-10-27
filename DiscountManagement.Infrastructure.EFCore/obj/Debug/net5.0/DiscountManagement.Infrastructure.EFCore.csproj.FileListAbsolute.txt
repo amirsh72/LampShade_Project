@@ -26,3 +26,7 @@ D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\obj\Debug\net5.0\Disc
 D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\obj\Debug\net5.0\ref\DiscountManagement.Infrastructure.EFCore.dll
 D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\obj\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
 D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\obj\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.genruntimeconfig.cache
+D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Application.Contracts.dll
+D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Domain.dll
+D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Application.Contracts.pdb
+D:\Code\LampShade\DiscountManagement.Infrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Domain.pdb

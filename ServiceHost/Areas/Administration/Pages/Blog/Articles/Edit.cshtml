@@ -1,0 +1,119 @@
+﻿@page "{id:long}"
+@model ServiceHost.Areas.Administration.Pages.Blog.Articles.EditModel
+@{
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ویرایش گروه محصول</h4>
+</div>*@
+<form  method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Title" class="control-label">نام</label>
+                    <input type="text" class="form-control" asp-for="@Model.editArticle.Title" onchange="makeSlug('Name', 'Slug')">
+                   @* <span asp-validation-for="Name" class="error"></span>*@
+                </div>
+                  <div class="form-group">
+                <label class="sr-only" asp-for="editArticle.CategoryId"></label>
+                <select class="form-control" asp-for="editArticle.CategoryId" asp-items="Model.ArticleCategories">
+                    <option value="0">گروه مقاله </option>
+                </select>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Slug" class="control-label">اسلاگ</label>
+                    <input type="text" class="form-control" asp-for="editArticle.Slug" id="Slug">
+                   
+                    @*<span asp-validation-for="Slug" class="error"></span>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="Picture" class="control-label">عکس</label>
+                    <input type="file" class="form-control" asp-for="editArticle.Picture" accept="image/*">
+                   @* <span asp-validation-for="Picture" class="error"></span>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureAlt" class="control-label">Alt</label>
+                    <input type="text" class="form-control" asp-for="editArticle.PictureAlt">
+                    @*<span asp-validation-for="PictureAlt" class="error"></span>*@
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureTitle" class="control-label">عنوان</label>
+                    <input type="text" class="form-control" asp-for="editArticle.PictureTitle">
+                    @*<span asp-validation-for="PictureTitle" class="error"></span>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="Description" class="control-label">توضیحات</label>
+                    <textarea class="form-control autogrow" id="BodyContent" asp-for="editArticle.Description" onchange="fillField('Description', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    @*<span asp-validation-for="Description" class="error"></span>*@
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="ShortDescription" class="control-label">توضیحات کوتاه</label>
+                    <textarea class="form-control autogrow" asp-for="editArticle.ShortDescription" onchange="fillField('Description', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    @*<span asp-validation-for="Description" class="error"></span>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="KeyWords" class="control-label">کلمات کلیدی</label>
+                    <input type="text" class="form-control" asp-for="editArticle.Keywords">
+                    @*<span asp-validation-for="KeyWords" class="error"></span>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="MetaDescription" class="control-label">توضیحات متا</label>
+                    <textarea class="form-control autogrow" asp-for="editArticle.MetaDescription"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    @*<span asp-validation-for="MetaDescription" class="error"></span>*@
+                </div>
+            </div>
+             <div class="col-md-12">
+                <div class="form-group">
+                    <label for="KeyWords" class="control-label"></label>
+                    <input class="form-control" name="CanonicalAddress" asp-for="editArticle.CanonicalAddress">
+                    <span asp-validation-for="editArticle.CanonicalAddress" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="MetaDescription" class="control-label">تاریخ انتشار</label>
+                    <textarea class="form-control autogrow"  asp-for="editArticle.PublishDate"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="editArticle.PublishDate" class="error"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+     <input type="text"  asp-for="editArticle.Id" >
+     
+      
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

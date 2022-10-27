@@ -9,7 +9,6 @@ D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Appli
 D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.dll
 D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\ref\BlogManagment.Application.dll
 D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.pdb
-D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.csproj.AssemblyReference.cache
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\0_Framework.dll
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\BlogManagement.Application.Contracts.dll
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\BlogManagement.Domain.dll
@@ -17,3 +16,4 @@ D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\BlogManagement.Appl
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\BlogManagement.Domain.pdb
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\0_Framework.pdb
 D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.csproj.CopyComplete
+D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.csproj.AssemblyReference.cache

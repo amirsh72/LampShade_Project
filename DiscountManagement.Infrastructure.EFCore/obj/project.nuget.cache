@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bnjYX5S6l7wDTO6AJAHhPA+bnCiSldJzW8dA0liz2+DiEdEMPU5n3Oeucrf9lk8AUctxaKHuEfP9kTv0XvqYaQ==",
+  "dgSpecHash": "xeERgJzVYF1EMlRa1fZY2qwlSXuKs27WkqshikIDogoZ9+Lz2sZRZd06LsIstkWERs7NnLy/kQgQStAVPJZt5A==",
   "success": true,
   "projectFilePath": "D:\\Code\\LampShade\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj",
   "expectedPackageFiles": [

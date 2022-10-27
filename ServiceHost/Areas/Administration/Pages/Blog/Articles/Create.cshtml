@@ -1,0 +1,122 @@
+﻿@page
+@*@model ShopManagement.application.Contracts.ProductCategory.CreateProductCategory*@
+@model ServiceHost.Areas.Administration.Pages.Blog.Articles.CreateModel
+@{
+
+}
+@*<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ایجاد گروه محصول جدید</h4>
+    </div>*@
+
+<form method="post" enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Name" class="control-label">نام</label>
+                    <input type="text" class="form-control"  asp-for="createArticle.Title" onchange="makeSlug('Name', 'Slug')">
+                    <span asp-validation-for="createArticle.Title" class="error"></span>
+                </div>
+            </div>
+              <div class="form-group">
+                <label class="" asp-for="createArticle.CategoryId"></label>
+                <select class="form-control"   asp-for="createArticle.CategoryId" asp-items="Model.ArticleCategories">
+                    <option value="0">گروه مقاله </option>
+                </select>
+                <span asp-validation-for="createArticle.CategoryId" class="error"></span>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Slug" class="control-label">اسلاگ</label>
+                    <input type="text" class="form-control"  asp-for="createArticle.Slug" >
+                    <span asp-validation-for="createArticle.Slug" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="Picture" class="control-label">عکس</label>
+                    <input type="file" class="form-control"  asp-for="createArticle.Picture" accept="image/*">
+                    <span asp-validation-for="createArticle.Picture" class="error"></span>
+                </div>
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureAlt" class="control-label">Alt</label>
+                    <input type="text" class="form-control"  asp-for="createArticle.PictureAlt">
+                    <span asp-validation-for="createArticle.PictureAlt" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PictureTitle" class="control-label">عنوان</label>
+                    <input type="text" class="form-control"  asp-for="createArticle.PictureTitle">
+                    <span asp-validation-for="createArticle.PictureTitle" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="Description" class="control-label">توضیحات</label>
+                    <textarea class="form-control autogrow" id="BodyContent"  asp-for="createArticle.Description" onchange="fillField('Description', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="createArticle.Description" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="Description" class="control-label">توضیحات کوتاه</label>
+                    <textarea class="form-control autogrow"  asp-for="createArticle.ShortDescription" onchange="fillField('Description', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="createArticle.ShortDescription" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="KeyWords" class="control-label">کلمات کلیدی</label>
+                    <input type="text" class="form-control"  asp-for="createArticle.Keywords">
+                    <span asp-validation-for="createArticle.Keywords" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="KeyWords" class="control-label"></label>
+                    <input class="form-control" asp-for="createArticle.CanonicalAddress">
+                    <span asp-validation-for="createArticle.CanonicalAddress" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="MetaDescription" class="control-label">توضیحات متا</label>
+                    <textarea class="form-control autogrow" asp-for="createArticle.MetaDescription"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="createArticle.MetaDescription" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label for="MetaDescription" class="control-label">تاریخ انتشار</label>
+                    <textarea class="form-control autogrow"  asp-for="createArticle.PublishDate"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="createArticle.PublishDate" class="error"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>

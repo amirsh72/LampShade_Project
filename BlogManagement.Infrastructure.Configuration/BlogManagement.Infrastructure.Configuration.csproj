@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_LampShadeQuery\01_LampShadeQuery.csproj" />
     <ProjectReference Include="..\BlogManagement.Infrastrcture.EFCore\BlogManagement.Infrastrcture.EFCore.csproj" />
     <ProjectReference Include="..\BlogManagment.Application\BlogManagment.Application.csproj" />
   </ItemGroup>

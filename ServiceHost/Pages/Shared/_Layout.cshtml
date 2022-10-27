@@ -4,8 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lampshapde Store</title>
+    @if (@ViewData["Title"] != null)
+    {
 
+        <title>@ViewData["Title"]-فروشگاه لوازم دکوری</title>
+    }
+    else
+    {
+        <title>فروشگاه لوازم دکوری</title>
+
+    }
+
+    <meta name="keywords" content="@ViewData["keywords"]"/>
+    <meta name="description" content="@ViewData["metaDescription"]"/>
     <!-- Vendor CSS -->
     <link href="~/Theme/assets/css/vendors.css" rel="stylesheet">
     <!-- Main CSS -->
@@ -15,15 +26,14 @@
 </head>
 
 <body>
-   @await Component.InvokeAsync("Menu")
+    @await Component.InvokeAsync("Menu")
 
     @RenderBody()
 
     <!--====================  footer area ====================-->
-    
     <!--====================  End of footer area  ====================-->
     @await Component.InvokeAsync("Footer")
-   
+
 
     <div class="search-overlay" id="search-overlay">
         <a href="javascript:void(0)" class="close-search-overlay" id="close-search-overlay">
@@ -33,7 +43,7 @@
         <!--=======  search form  =======-->
 
         <div class="search-form">
-            <form  method="get" asp-page="/Search">
+            <form method="get" asp-page="/Search">
                 <input type="search" name="value" id="value" placeholder="هرچه میخواهید در فروشگاه جسجو کن">
                 <button type="submit">
                     <i class="ion-android-search"></i>

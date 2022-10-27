@@ -20,3 +20,7 @@ D:\Code\LampShade\ShopManagementInfrastructure.EFCore\obj\Debug\net5.0\ShopManag
 D:\Code\LampShade\ShopManagementInfrastructure.EFCore\obj\Debug\net5.0\ref\ShopManagementInfrastructure.EFCore.dll
 D:\Code\LampShade\ShopManagementInfrastructure.EFCore\obj\Debug\net5.0\ShopManagementInfrastructure.EFCore.pdb
 D:\Code\LampShade\ShopManagementInfrastructure.EFCore\obj\Debug\net5.0\ShopManagementInfrastructure.EFCore.genruntimeconfig.cache
+D:\Code\LampShade\ShopManagementInfrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Application.Contracts.dll
+D:\Code\LampShade\ShopManagementInfrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Domain.dll
+D:\Code\LampShade\ShopManagementInfrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Application.Contracts.pdb
+D:\Code\LampShade\ShopManagementInfrastructure.EFCore\bin\Debug\net5.0\CommentManagement.Domain.pdb

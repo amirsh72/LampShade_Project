@@ -1,6 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model _01_LampShadeQuery.MenuModel
 @{
 }
 <!--====================  header area ====================-->
@@ -27,29 +28,28 @@
 
 
                                 <li class="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html">محصولات</a>
+                                    <a>مقالات</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-post-left-sidebar.html">Blog Post Left Sidebar</a>
-                                        </li>
+                                        @foreach (var category in Model.articleCategories)
+                                        {
+                                            <li>
+                                                 <a asp-page="./ArticleCategory" asp-route-id="@category.Slug"> @category.Name</a>
+                                            </li>
+                                        }
+
+
 
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html">محصولات</a>
+                                    <a >محصولات</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="blog-left-sidebar.html">گروه 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-right-sidebar.html">گروه 2</a>
-                                        </li>
+                                        @foreach (var category in Model.productCategories)
+                                        {
+                                            <li>
+                                                <a asp-page="./ProductCategory" asp-route-id="@category.Slug"> @category.Name</a>
+                                            </li>
+                                        }
 
 
                                     </ul>
@@ -173,9 +173,10 @@
                                 <!-- settings menu -->
                                 <div class="settings-menu-wrapper" id="settings-menu-wrapper">
                                     <a class="single-settings-block">
-                                        <h4 class="title">پروفایل من </h4>ثبت نام</a>
-                                        
-                                        </div>
+                                        <h4 class="title">پروفایل من </h4>ثبت نام
+                                    </a>
+
+                                </div>
                             </li>
                             <li>
                                 <a href="login-register.html">ورود</a>
@@ -183,8 +184,8 @@
 
                         </ul>
                     </div>
-                   
-                      @*<div class="single-settings-block">
+
+                    @*<div class="single-settings-block">
                         <h4 class="title">CURRENCY: USD </h4>
                         <ul>
                         <li>
@@ -208,11 +209,11 @@
                         </li>
                         </ul>
                         </div>*@
-                        
+
                 </div>
             </div>
 
-            
+
 
         </div>
     </div>
@@ -256,9 +257,9 @@
     <!--=======  End of mobile navigation area  =======-->
 
 </div>
-            
-        
-    
+
+
+
 <!--====================  End of header area  ====================-->
 <div class="offcanvas-mobile-menu" id="offcanvas-mobile-menu">
     <a href="javascript:void(0)" class="offcanvas-menu-close" id="offcanvas-menu-close-trigger">

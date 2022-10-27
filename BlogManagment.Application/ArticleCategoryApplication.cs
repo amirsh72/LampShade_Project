@@ -43,7 +43,7 @@ namespace BlogManagment.Application
             if(articleCategory == null)
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
 
-            if (_articleCategoryRepository.Exists(x => x.Name == Command.Name))
+            if (_articleCategoryRepository.Exists(x => x.Name == Command.Name && x.Id!=Command.Id))
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
 
             var slug = Command.Slug.Slugify1();
@@ -52,10 +52,15 @@ namespace BlogManagment.Application
                 Command.Description,Command.ShowOrder, slug, Command.Keywords, Command.MetaDescription,
                 Command.CanonicalAddress);
 
-            _articleCategoryRepository.Create(articleCategory);
+           
             _articleCategoryRepository.SaveChange();
 
             return operation.Succedded();
+        }
+
+        public List<ArticleCategoryViewModel> GetArticleCategories()
+        {
+            return _articleCategoryRepository.GetArticleCategories();
         }
 
         public EditArticleCategory GetDetails(long id)

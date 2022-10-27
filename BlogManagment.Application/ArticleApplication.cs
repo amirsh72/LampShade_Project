@@ -68,6 +68,8 @@ namespace BlogManagment.Application
 
         }
 
+        
+
         public EditArticle GetDetails(long id)
         {
             return _articleRepository.GetDetails(id);

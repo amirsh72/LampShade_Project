@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using BlogManagement.Application.Contracts.Article;
+using BlogManagement.Application.Contracts.ArticleCategory;
 using BlogManagement.Domain.ArticleAgg;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,6 +19,8 @@ namespace BlogManagement.Infrastrcture.EFCore.Repository
         {
             _context=context;
         }
+
+       
 
         public EditArticle GetDetails(long id)
         {
@@ -50,8 +53,9 @@ namespace BlogManagement.Infrastrcture.EFCore.Repository
                 Id = x.Id,
                 Category = x.Category.Name,
                 Title = x.Title,
+                Picture=x.Picture,
                 PublishDate = x.PublishDate.ToFarsi(),
-                ShortDescription = x.ShortDescription,
+                ShortDescription = x.ShortDescription.Substring(0,Math.Min(x.ShortDescription.Length,50))+"...",
                 CategoryId= x.CategoryId,
 
             });
