@@ -12,3 +12,4 @@ D:\Code\LampShade\ShopManagement.application.Contracts\obj\Debug\net5.0\ShopMana
 D:\Code\LampShade\ShopManagement.application.Contracts\obj\Debug\net5.0\ShopManagement.application.Contracts.dll
 D:\Code\LampShade\ShopManagement.application.Contracts\obj\Debug\net5.0\ref\ShopManagement.application.Contracts.dll
 D:\Code\LampShade\ShopManagement.application.Contracts\obj\Debug\net5.0\ShopManagement.application.Contracts.pdb
+D:\Code\LampShade\ShopManagement.application.Contracts\obj\Debug\net5.0\ShopManagement.application.Contracts.csproj.AssemblyReference.cache
