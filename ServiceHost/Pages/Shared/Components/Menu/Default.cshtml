@@ -2,7 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @model _01_LampShadeQuery.MenuModel
-@inject _0_Framework.Application.AuthHelper AuthHelper;
+@inject _0_Framework.Application.IAuthHelper AuthHelper;
 @{
 }
 <!--====================  header area ====================-->
@@ -34,7 +34,7 @@
                                         @foreach (var category in Model.articleCategories)
                                         {
                                             <li>
-                                                 <a asp-page="./ArticleCategory" asp-route-id="@category.Slug"> @category.Name</a>
+                                                <a asp-page="./ArticleCategory" asp-route-id="@category.Slug"> @category.Name</a>
                                             </li>
                                         }
 
@@ -43,7 +43,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a >محصولات</a>
+                                    <a>محصولات</a>
                                     <ul class="sub-menu">
                                         @foreach (var category in Model.productCategories)
                                         {
@@ -180,18 +180,18 @@
                                 </div>
                             </li>
                             @if (AuthHelper.IsAuthenticated())
-                           {
-                               <li>
-                                <a asp-page="./Account" asp-page-handler="Logout">خروج</a>
+                            {
+                                <li>
+                                    <a asp-page="/Account" asp-page-handler="Logout">خروج</a>
                                 </li>
                             }
                             else
                             {
-                              <li>
-                                <a asp-page="./Account">ورود</a>
-                            </li>  
+                                <li>
+                                    <a asp-page="/Account" asp-page-handler="Login" >ورود</a>
+                                </li>
                             }
-                            
+
 
                         </ul>
                     </div>
