@@ -1,6 +1,8 @@
 
 
+using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contracts.Inventory;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,6 +11,7 @@ using ShopManagement.application.Contracts.Product;
 
 namespace ServiceHost.Areas.Administration.Pages.Inventory
 {
+    [Authorize(Roles = Roles.Administator)]
     public class EditModel : PageModel
     {
         [BindProperty] public EditInventory editinventory{ get; set; }

@@ -19,7 +19,7 @@ namespace AccountManagement.Application.Contracts.Account
         public string Password { get;  set; }
         [Required(ErrorMessage = ValidationMessages.IsRequierd)]
         public string Mobile { get;  set; }
-        [Range(1,int.MaxValue,ErrorMessage =ValidationMessages.IsRequierd)]
+        [Range(0,int.MaxValue,ErrorMessage =ValidationMessages.IsRequierd)]
         public long RoleId { get;  set; }
         public IFormFile ProfilePhoto { get;  set; }
     }
