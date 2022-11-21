@@ -1,5 +1,6 @@
 using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contracts.Inventory;
+using InventoryManagement.Infrastructure.Configuration.Permissions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -23,7 +24,7 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
             _productApplication = productApplication;
             _inventoryApplication = inventoryApplication;
         }
-
+        [NeedsPermissionsAttribute(InventoryPermissions.Reduce)]
         public void OnGet(long id)
         {
             products = new SelectList(_productApplication.GetProducts(), "Id", "Name");

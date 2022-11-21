@@ -1,7 +1,9 @@
+using _0_Framework.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ShopManagement.application.Contracts.ProductCategory;
+using ShopManagement.Configuration.Permissions;
 using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
@@ -17,7 +19,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
         {
             _productCategoryApplication = productCategoryApplication;
         }
-
+        [NeedsPermissionsAttribute(ShopPermissions.ListProductCaegories)]
         public void OnGet(ProductCategorySearchModel searchModel)
         {
            ProductCategories= _productCategoryApplication.Search(searchModel);

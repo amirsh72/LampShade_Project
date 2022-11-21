@@ -16,4 +16,3 @@ D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\BlogManagement.Appl
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\BlogManagement.Domain.pdb
 D:\Code\LampShade\BlogManagment.Application\bin\Debug\net5.0\0_Framework.pdb
 D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.csproj.CopyComplete
-D:\Code\LampShade\BlogManagment.Application\obj\Debug\net5.0\BlogManagment.Application.csproj.AssemblyReference.cache

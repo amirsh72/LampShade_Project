@@ -1,4 +1,5 @@
 ﻿@page
+@using InventoryManagement.Infrastructure.Configuration.Permissions
 @model ServiceHost.Areas.Administration.Pages.Inventory.IndexModel
 @{
 }
@@ -13,18 +14,18 @@
         <h4 class="page-title pull-right">@ViewData["title"]</h4>
         <p class="pull-left">
             @* <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد گروه محصول جدید</a>*@
-            <a class="btn btn-success btn-lg" asp-page="./Create" asp-area="Administration"> تعریف انبار</a>
+            <a Permission="@InventoryPermissions.CreateInventory" class="btn btn-success btn-lg" asp-page="./Create" asp-area="Administration"> تعریف انبار</a>
         </p>
     </div>
 </div>
-<div class="row">
+<div class="row" >
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">جستجو در انبار</h3>
             </div>
             <div class="panel-body">
-                <form class="form-inline" role="form" method="get">
+                <form class="form-inline" role="form" method="get" Permission="@InventoryPermissions.SearchInventory">
 
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.ProductId"></label>
@@ -85,19 +86,19 @@
 
 
                                         <td>
-                                            <a class="btn btn-warning pull-right m-rl-3"
+                                            <a Permission="@InventoryPermissions.EditInventory" class="btn btn-warning pull-right m-rl-3"
                                            asp-page="./Edit" asp-page-handler="OnGet" asp-route-id="@item.Id">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
-                                            <a class="btn btn-success pull-right m-rl-3"
+                                            <a Permission="@InventoryPermissions.Increase" class="btn btn-success pull-right m-rl-3"
                                            asp-page="./Increase" asp-page-handler="OnGet" asp-route-id="@item.Id">
                                                 <i class="fa fa-plus"></i> افزایش
                                             </a>
-                                             <a class="btn btn-danger pull-right m-rl-3"
+                                             <a Permission="@InventoryPermissions.Reduce" class="btn btn-danger pull-right m-rl-3"
                                            asp-page="./Reduce" asp-page-handler="OnGet" asp-route-id="@item.Id">
                                                 <i class="fa fa-minus"></i> کاهش
                                             </a>
-                                            <a class="btn btn-primary pull-right m-rl-3"
+                                            <a Permission="@InventoryPermissions.OperationLog" class="btn btn-primary pull-right m-rl-3"
                                            asp-page="./Operationlog" asp-page-handler="OnGet" asp-route-id="@item.Id">
                                                 <i class="fa fa-recycle"></i> گردش انبار
                                             </a>

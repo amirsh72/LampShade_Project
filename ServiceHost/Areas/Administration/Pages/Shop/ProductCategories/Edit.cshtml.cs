@@ -1,7 +1,9 @@
+using _0_Framework.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ShopManagement.application.Contracts.ProductCategory;
+using ShopManagement.Configuration.Permissions;
 
 namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
 {
@@ -15,7 +17,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
         {
             _productCategoryApplication = productCategoryApplication;
         }
-
+        [NeedsPermissionsAttribute(ShopPermissions.EditProductCaegory)]
         public void OnGet(long id)
         {
             editProductCategory = _productCategoryApplication.GetDetails(id);
