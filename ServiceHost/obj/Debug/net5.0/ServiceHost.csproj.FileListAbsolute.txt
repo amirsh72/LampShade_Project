@@ -266,3 +266,9 @@ D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Index.cshtml.g.cs
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\AccessDenied.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Nancy.dll
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Cart.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Checkout.cshtml.g.cs

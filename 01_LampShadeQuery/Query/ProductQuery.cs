@@ -6,6 +6,7 @@ using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.application.Contracts.Order;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagementInfrastructure.EFCore;
 using System;
@@ -62,6 +63,7 @@ namespace _01_LampShadeQuery.Query
                 {
                     var price = productInventory.UnitPrice;
                     product.Price = price.ToMoney();
+                    product.DoublePrice = price;
                     var discount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
                     if (discount != null)
                     {
@@ -190,15 +192,15 @@ namespace _01_LampShadeQuery.Query
                     var price = productInventory.UnitPrice;
                     product.Price = price.ToMoney();
                     var discount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
-                    if (discount != null)
-                    {
-                        int discountRate = discount.DiscountRate;
-                        product.DiscountRate = discountRate;
-                        product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
-                        product.HasDiscount = discountRate > 0;
-                        var discountAmount = Math.Round((price * discountRate) / 100);
-                        product.PriceWhitDiscount = (price - discountAmount).ToMoney();
-                    }
+                    if (discount == null)             
+                        continue;
+                    
+                    var discountRate = discount.DiscountRate;
+                    product.DiscountRate = discountRate;
+                    product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
+                    product.HasDiscount = discountRate > 0;
+                    var discountAmount = Math.Round((price * discountRate) / 100);
+                    product.PriceWhitDiscount = (price - discountAmount).ToMoney();
                 }
 
             }
@@ -215,6 +217,19 @@ namespace _01_LampShadeQuery.Query
                 PictureTitle = x.PictureTitle,
                 ProductId = x.ProductId
             }).Where(x => !x.IsRemoved).ToList();
+        }
+
+        public List<CartItem> CheckInventoryStatus(List<CartItem> cartItems)
+        {
+            var inventory=_inventoryContext.Inventory.ToList();
+            foreach(var cartItem in cartItems.Where(cartItem=>
+            inventory.Any(x=>x.ProductId==cartItem.Id&&x.InStock)))
+            {
+                var itemInventory = inventory.Find(x => x.ProductId == cartItem.Id);
+                cartItem.IsInStock = itemInventory.CalculateCurrentCount()>=cartItem.Count;
+            }
+
+            return cartItems;
         }
         // private static List<CommentQueryModel> MapComments(List<Comment> comments)
         //{
