@@ -27,3 +27,9 @@ D:\Code\LampShade\CommentManagement.Configuration\obj\Debug\net5.0\CommentManage
 D:\Code\LampShade\CommentManagement.Configuration\obj\Debug\net5.0\CommentManagement.Configuration.dll
 D:\Code\LampShade\CommentManagement.Configuration\obj\Debug\net5.0\ref\CommentManagement.Configuration.dll
 D:\Code\LampShade\CommentManagement.Configuration\obj\Debug\net5.0\CommentManagement.Configuration.pdb
+D:\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.dll
+D:\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+D:\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrustructure.EFCore.dll
+D:\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
+D:\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+D:\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrustructure.EFCore.pdb

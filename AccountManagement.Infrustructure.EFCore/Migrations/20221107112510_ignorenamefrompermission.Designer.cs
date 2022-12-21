@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AccountManagement.Infrustructure.EFCore.Migrations
 {
-    [DbContext(typeof(AccountContext))]
+    [DbContext(typeof(AccountContext1))]
     [Migration("20221107112510_ignorenamefrompermission")]
     partial class ignorenamefrompermission
     {

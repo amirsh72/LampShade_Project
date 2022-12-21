@@ -13,8 +13,8 @@ namespace AccountManagement.Infrustructure.EFCore.RepositoryBase
 {
     public class RoleRepository : RepositoryBase<long, Role>,IRoleRepository
     {
-        private readonly AccountContext _accountContext;
-        public RoleRepository(AccountContext accountcontext) : base(accountcontext)
+        private readonly AccountContext1 _accountContext;
+        public RoleRepository(AccountContext1 accountcontext) : base(accountcontext)
         {
             _accountContext = accountcontext;
         }

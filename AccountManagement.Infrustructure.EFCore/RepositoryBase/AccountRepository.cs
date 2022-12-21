@@ -13,10 +13,19 @@ namespace AccountManagement.Infrustructure.EFCore.RepositoryBase
 {
     public class AccountRepository : RepositoryBase<long, Account>, IAccountRepository
     {
-        private readonly AccountContext _context;
-        public AccountRepository(AccountContext context) : base(context)
+        private readonly AccountContext1 _context;
+        public AccountRepository(AccountContext1 context) : base(context)
         {
             _context = context;
+        }
+
+        public List<AccountViewModel> GetAccounts()
+        {
+            return _context.Accounts.Select(x => new AccountViewModel
+            {
+                Id = x.Id,
+                Fullname = x.Fullname,
+            }).ToList();
         }
 
         public Account GetBy(string username)

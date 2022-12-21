@@ -47,3 +47,11 @@ D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagemen
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Domain.pdb
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.dll
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrustructure.EFCore.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrustructure.EFCore.pdb

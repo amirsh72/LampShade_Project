@@ -19,7 +19,7 @@ namespace ShopManagementInfrastructure.EFCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("ShopManagement.Domain.CommentAgg.Comment", b =>
+            modelBuilder.Entity("CommentManagement.Domain.CommentAgg.Comment", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,8 +30,7 @@ namespace ShopManagementInfrastructure.EFCore.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsCanceled")
                         .HasColumnType("bit");
@@ -40,21 +39,76 @@ namespace ShopManagementInfrastructure.EFCore.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Message")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("ProductId")
+                    b.Property<long>("OwnerRecordId")
                         .HasColumnType("bigint");
+
+                    b.Property<long>("ParentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Website")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ParentId");
+
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.OrderAgg.Order", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<long>("AccountId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("DiscountAmount")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("IsCanceled")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPaid")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("IssueTrackingNo")
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
+
+                    b.Property<double>("PayAmount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("PaymentMethod")
+                        .HasColumnType("int");
+
+                    b.Property<long>("RefId")
+                        .HasColumnType("bigint");
+
+                    b.Property<double>("TotalAmount")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
@@ -265,15 +319,61 @@ namespace ShopManagementInfrastructure.EFCore.Migrations
                     b.ToTable("Slides");
                 });
 
-            modelBuilder.Entity("ShopManagement.Domain.CommentAgg.Comment", b =>
+            modelBuilder.Entity("CommentManagement.Domain.CommentAgg.Comment", b =>
                 {
-                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", "product")
-                        .WithMany("comments")
-                        .HasForeignKey("ProductId")
+                    b.HasOne("CommentManagement.Domain.CommentAgg.Comment", "parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("product");
+                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", null)
+                        .WithMany("comments")
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("parent");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.OrderAgg.Order", b =>
+                {
+                    b.OwnsMany("ShopManagement.Domain.OrderAgg.OrderItem", "Items", b1 =>
+                        {
+                            b1.Property<long>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .UseIdentityColumn();
+
+                            b1.Property<int>("Count")
+                                .HasColumnType("int");
+
+                            b1.Property<DateTime>("CreationDate")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<int>("DiscountRate")
+                                .HasColumnType("int");
+
+                            b1.Property<long>("OrderId")
+                                .HasColumnType("bigint");
+
+                            b1.Property<long>("ProdouctId")
+                                .HasColumnType("bigint");
+
+                            b1.Property<double>("UnitPrice")
+                                .HasColumnType("float");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OrderId");
+
+                            b1.ToTable("OrderItems");
+
+                            b1.WithOwner("Order")
+                                .HasForeignKey("OrderId");
+
+                            b1.Navigation("Order");
+                        });
+
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
@@ -296,6 +396,11 @@ namespace ShopManagementInfrastructure.EFCore.Migrations
                         .IsRequired();
 
                     b.Navigation("product");
+                });
+
+            modelBuilder.Entity("CommentManagement.Domain.CommentAgg.Comment", b =>
+                {
+                    b.Navigation("Children");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>

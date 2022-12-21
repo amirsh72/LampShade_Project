@@ -59,6 +59,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.4, )"
+            },
+            "ZarinpalSandbox": {
+              "target": "Package",
+              "version": "[2.0.4, )"
             }
           },
           "imports": [

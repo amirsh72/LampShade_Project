@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AccountManagement.Infrustructure.EFCore.Migrations
 {
-    [DbContext(typeof(AccountContext))]
+    [DbContext(typeof(AccountContext1))]
     [Migration("20221101075537_Roleadd")]
     partial class Roleadd
     {

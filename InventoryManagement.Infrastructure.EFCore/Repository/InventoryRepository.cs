@@ -1,9 +1,9 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using AccountManagement.Infrustructure.EFCore;
 using InventoryManagement.Application.Contracts.Inventory;
 using InventoryManagement.Domain;
 using InventoryManagement.Domain.InventoryAgg;
-
 using ShopManagementInfrastructure.EFCore;
 using System;
 using System.Collections.Generic;
@@ -15,12 +15,14 @@ namespace InventoryManagement.Infrastructure.EFCore.Repository
 {
     public class InventoryRepository : RepositoryBase<long, Inventory>, IInventoryRepository
     {
+        private readonly AccountContext1 _accountContext;
         private readonly ShopContext _shopContext;
         private readonly InventoryContext _inventoryContext;
-        public InventoryRepository(InventoryContext inventoryContext, ShopContext shopContext) : base(inventoryContext)
+        public InventoryRepository(InventoryContext inventoryContext, ShopContext shopContext, AccountContext1 accountContext) : base(inventoryContext)
         {
             _shopContext = shopContext;
-            _inventoryContext=inventoryContext;
+            _inventoryContext = inventoryContext;
+            _accountContext = accountContext;
         }
 
         public Inventory GetBy(long ProductId)
@@ -40,8 +42,9 @@ namespace InventoryManagement.Infrastructure.EFCore.Repository
 
         public List<InventoryOperationViewModel> GetOperationlog(long inventoryId)
         {
+            var accounts = _accountContext.Accounts.Select(x => new { x.Id, x.Fullname }).ToList();
             var inventory = _inventoryContext.Inventory.FirstOrDefault(x=>x.Id==inventoryId);
-            return inventory.Operations.Select(x => new InventoryOperationViewModel
+            var log= inventory.Operations.Select(x => new InventoryOperationViewModel
             {
                 Id = x.Id,
                 Count = x.Count,
@@ -49,12 +52,14 @@ namespace InventoryManagement.Infrastructure.EFCore.Repository
                 Description = x.Description,
                 Operation = x.Operation,
                 OperationDate = x.OperationDate.ToFarsi(),
-                Operator = "مدیرسیستم",
                 OperatorId = x.OperatorId,
                 
             }).ToList();
-           
-
+            foreach(var operation in log)
+            {
+                operation.Operator=accounts.FirstOrDefault(x=>x.Id==operation.OperatorId)?.Fullname;
+            }
+            return log;
       
         }
 

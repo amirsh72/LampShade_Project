@@ -7,15 +7,19 @@ using _01_LampShadeQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Aplication;
+using ShopManagement.application.Contracts.Order;
 using ShopManagement.application.Contracts.Product;
 using ShopManagement.application.Contracts.ProductCategory;
 using ShopManagement.application.Contracts.ProductPicture;
 using ShopManagement.application.Contracts.Slide;
 using ShopManagement.Configuration.Permissions;
+using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.Services;
 using ShopManagement.Domain.SlideAgg;
+using ShopManagement.Infrastructure.InventoryAcl;
 using ShopManagementInfrastructure.EFCore;
 using ShopManagementInfrastructure.EFCore.Repository;
 using System;
@@ -37,6 +41,13 @@ namespace ShopManagement.Configuration
 
             services.AddTransient<ISlideApplication,SlideApplication>();
             services.AddTransient<ISlideRepository, SlideRepository>();
+            
+            services.AddTransient<IOrderApplication,OrderApplication>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+
+            services.AddSingleton<ICartService, CartService>();
+
+            services.AddTransient<IShopInventoryAcl, ShopInventoryAcl>();
 
 
             services.AddTransient<ISlideQuery, SlideQuery>();

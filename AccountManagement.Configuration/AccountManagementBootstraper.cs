@@ -21,7 +21,7 @@ namespace AccountManagement.Configuration
             services.AddTransient<IRoleApplication, RoleApplication>();
             services.AddTransient<IRoleRepository, RoleRepository>();
 
-            services.AddDbContext<AccountContext>(x => x.UseSqlServer(connectionString));
+            services.AddDbContext<AccountContext1>(x => x.UseSqlServer(connectionString));
         }
     }
 }

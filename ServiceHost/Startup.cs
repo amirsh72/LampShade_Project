@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using _0_Framework.Application.ZarinPal;
 using _0_Framework.Infrastructure;
 using AccountManagement.Configuration;
 using BlogManagement.Infrastructure.Configuration;
@@ -48,6 +49,7 @@ namespace ServiceHost
             services.AddTransient<IAuthHelper, AuthHelper>();
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            services.AddSingleton<IZarinPalFactory, ZarinPalFactory>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.CheckConsentNeeded = context => true;

@@ -12,3 +12,4 @@ D:\Code\LampShade\DiscountManagement.Application.Contract\obj\Debug\net5.0\Disco
 D:\Code\LampShade\DiscountManagement.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contract.dll
 D:\Code\LampShade\DiscountManagement.Application.Contract\obj\Debug\net5.0\ref\DiscountManagement.Application.Contract.dll
 D:\Code\LampShade\DiscountManagement.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+D:\Code\LampShade\DiscountManagement.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contract.csproj.AssemblyReference.cache
