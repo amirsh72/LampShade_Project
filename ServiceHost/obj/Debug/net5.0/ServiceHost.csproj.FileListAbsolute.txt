@@ -289,3 +289,10 @@ D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.Inv
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Orders\Index.cshtml.g.cs
 D:\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Orders\Items.cshtml.g.cs
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Presention.Api.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Presentation.Api.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Presention.Api.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Presentation.Api.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

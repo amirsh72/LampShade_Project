@@ -18,6 +18,8 @@ namespace InventoryManagement.Application
             _authHelper = authHelper;
         }
 
+      
+
         public OperationResult Create(CreateInventory command)
         {
            var operation=new OperationResult();

@@ -6,6 +6,7 @@ using BlogManagement.Infrastructure.Configuration;
 using CommentManagement.Configuration;
 using DiscountManagement.Configuretion;
 using InventoryManagement.Infrastructure.Configuration;
+using InventoryManagement.Presentation.Api;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,12 +16,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configuration;
+using ShopManagement.Presentation.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ServiceHost
 {
@@ -81,10 +84,10 @@ namespace ServiceHost
 
 
 
-
+           
 
             services.AddRazorPages()
-                .AddMvcOptions(options =>options.Filters.Add<SecurityPageFilter>())
+                .AddMvcOptions(options => options.Filters.Add<SecurityPageFilter>())
                     .AddRazorPagesOptions(options =>
                     {
 
@@ -94,7 +97,11 @@ namespace ServiceHost
                         options.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
                         options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
 
-                    });
+                    })
+                    .AddApplicationPart(typeof(ProductController).Assembly)
+                    .AddApplicationPart(typeof(InventoryController).Assembly)
+                    .AddNewtonsoftJson();
+                    
 
         }
 
@@ -126,6 +133,7 @@ namespace ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
 
             });
         }
