@@ -110,6 +110,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -126,6 +130,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -133,6 +141,10 @@
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.4, )"
+            },
+            "SmsIrRestful": {
+              "target": "Package",
+              "version": "[1.1.3, )"
             },
             "ZarinpalSandbox": {
               "target": "Package",
@@ -2028,6 +2040,67 @@
         }
       }
     },
+    "D:\\Code\\LampShade\\ShopManagegement.Infrastructure.AccountAcl\\ShopManagegement.Infrastructure.AccountAcl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Code\\LampShade\\ShopManagegement.Infrastructure.AccountAcl\\ShopManagegement.Infrastructure.AccountAcl.csproj",
+        "projectName": "ShopManagegement.Infrastructure.AccountAcl",
+        "projectPath": "D:\\Code\\LampShade\\ShopManagegement.Infrastructure.AccountAcl\\ShopManagegement.Infrastructure.AccountAcl.csproj",
+        "packagesPath": "C:\\Users\\amir\\.nuget\\packages\\",
+        "outputPath": "D:\\Code\\LampShade\\ShopManagegement.Infrastructure.AccountAcl\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Code\\LampShade\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\Code\\LampShade\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj"
+              },
+              "D:\\Code\\LampShade\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {
+                "projectPath": "D:\\Code\\LampShade\\ShopManagement.Domain\\ShopManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Code\\LampShade\\ShopManagement.Aplication\\ShopManagement.Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -2176,6 +2249,9 @@
             "projectReferences": {
               "D:\\Code\\LampShade\\01_LampShadeQuery\\01_LampShadeQuery.csproj": {
                 "projectPath": "D:\\Code\\LampShade\\01_LampShadeQuery\\01_LampShadeQuery.csproj"
+              },
+              "D:\\Code\\LampShade\\ShopManagegement.Infrastructure.AccountAcl\\ShopManagegement.Infrastructure.AccountAcl.csproj": {
+                "projectPath": "D:\\Code\\LampShade\\ShopManagegement.Infrastructure.AccountAcl\\ShopManagegement.Infrastructure.AccountAcl.csproj"
               },
               "D:\\Code\\LampShade\\ShopManagement.Aplication\\ShopManagement.Aplication.csproj": {
                 "projectPath": "D:\\Code\\LampShade\\ShopManagement.Aplication\\ShopManagement.Aplication.csproj"

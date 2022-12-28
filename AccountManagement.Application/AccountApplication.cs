@@ -74,6 +74,16 @@ namespace AccountManagement.Application
             return operation.Succedded();
         }
 
+        public AccountViewModel GetAccountBy(long id)
+        {
+            var account = _accountRepository.Get(id);
+            return new AccountViewModel()
+            {
+                Fullname = account.Fullname,
+                Mobile = account.Mobile,
+            };
+        }
+
         public List<AccountViewModel> GetAccounts()
         {
             return _accountRepository.GetAccounts();
@@ -100,7 +110,7 @@ namespace AccountManagement.Application
             
 
             var authViewModel = new AuthViewModel(account.Id, account.RoleId, account.Fullname, 
-                command.Username,permissions);
+                account.Username,account.Mobile,permissions);
             _authHelper.Singin(authViewModel);
              
             

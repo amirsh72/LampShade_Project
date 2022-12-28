@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.Sms;
 using Microsoft.Extensions.Configuration;
 using ShopManagement.application.Contracts.Order;
 using ShopManagement.Domain.OrderAgg;
@@ -17,14 +18,17 @@ namespace ShopManagement.Aplication
         private readonly IConfiguration _configuration;
         private readonly IOrderRepository _orderRepository;
         private readonly IShopInventoryAcl _shopInventoryAcl;
+        private readonly ISmsService _smsService;
+        private readonly IShopAccountAcl _shopAccountAcl;
 
-
-        public OrderApplication(IOrderRepository orderRepository, IAuthHelper authHelper, IConfiguration configuration, IShopInventoryAcl shopInventoryAcl)
+        public OrderApplication(IOrderRepository orderRepository, IAuthHelper authHelper, IConfiguration configuration, IShopInventoryAcl shopInventoryAcl, ISmsService smsService, IShopAccountAcl shopAccountAcl)
         {
             _orderRepository = orderRepository;
             _authHelper = authHelper;
             _configuration = configuration;
             _shopInventoryAcl = shopInventoryAcl;
+            _smsService = smsService;
+            _shopAccountAcl = shopAccountAcl;
         }
 
         public void Cancel(long id)
@@ -55,7 +59,11 @@ namespace ShopManagement.Aplication
             {
                 return "";
             }
+
             _orderRepository.SaveChange();
+            var (name,mobile)=_shopAccountAcl.GetAccountBy(order.AccountId);
+            var CustomerMobile = _authHelper.CurrentAccountMobile();
+            _smsService.Send(mobile,$"{name}کاربر گرامی سفارش شماباشماره پیگیر{issueTrackingNo}ی با موفقیت انجام شد");
             return issueTrackingNo;
         }
 

@@ -296,3 +296,9 @@ D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Presentation.Api.p
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\SmsIrRestful.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagegement.Infrastructure.AccountAcl.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagegement.Infrastructure.AccountAcl.pdb
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\MailKit.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\MimeKit.dll
+D:\Code\LampShade\ServiceHost\bin\Debug\net5.0\crypto.dll

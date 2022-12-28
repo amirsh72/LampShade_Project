@@ -55,3 +55,5 @@ D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.I
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
 D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrustructure.EFCore.pdb
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagegement.Infrastructure.AccountAcl.dll
+D:\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagegement.Infrastructure.AccountAcl.pdb

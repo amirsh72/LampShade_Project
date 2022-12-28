@@ -190,7 +190,12 @@
       "ProjectGuid": "097b796c-89b7-47c4-a8f0-4ca3cac0b167",
       "DisplayName": "BlogManagement.Presentation.Api",
       "ColorIndex": 4
+    },
+    "a0cd74e9-4dc0-494b-94b1-e36a1b234a56": {
+      "ProjectGuid": "a0cd74e9-4dc0-494b-94b1-e36a1b234a56",
+      "DisplayName": "ShopManagegement.Infrastructure.AccountAcl",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 6
 }

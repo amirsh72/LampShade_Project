@@ -24,6 +24,8 @@ using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using _0_Framework.Application.Sms;
+using _0_Framework.Application.Email;
 
 namespace ServiceHost
 {
@@ -53,6 +55,8 @@ namespace ServiceHost
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddSingleton<IZarinPalFactory, ZarinPalFactory>();
+            services.AddSingleton<ISmsService, SmsService>();
+            services.AddSingleton<IEmailService, EmailService>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.CheckConsentNeeded = context => true;

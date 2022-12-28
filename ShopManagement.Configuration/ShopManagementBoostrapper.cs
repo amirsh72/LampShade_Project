@@ -6,6 +6,7 @@ using _01_LampShadeQuery.Contracts.Slide;
 using _01_LampShadeQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using ShopManagegement.Infrastructure.AccountAcl;
 using ShopManagement.Aplication;
 using ShopManagement.application.Contracts.Order;
 using ShopManagement.application.Contracts.Product;
@@ -48,6 +49,7 @@ namespace ShopManagement.Configuration
             services.AddSingleton<ICartService, CartService>();
 
             services.AddTransient<IShopInventoryAcl, ShopInventoryAcl>();
+            services.AddTransient<IShopAccountAcl, ShopAccountAcl>();
 
 
             services.AddTransient<ISlideQuery, SlideQuery>();
